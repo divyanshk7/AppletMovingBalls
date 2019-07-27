@@ -1,14 +1,14 @@
 import java.util.*;  
  import java.applet.*;  
  import java.awt.*;  
- //Package Declarations   
+  
  public class balls extends Applet implements Runnable  
  {  
- Random r = new Random(); // Random number generation for Different Colours   
+ Random r = new Random(); 
  int x = 10, y = 10,sang1 = 0, sang2 = 0, h = 500 , w = 500;  
  public void init()  
  {  
- Thread t = new Thread(this); // Thread creation for animation   
+ Thread t = new Thread(this);   
  t.start();  
  }  
  public void run()  
@@ -18,8 +18,8 @@ import java.util.*;
  try  
  {  
  repaint();  
- Thread.sleep(100);   // Thread time interval set to 100 milli seconds   
- if( x < w - 100)   // Playing with position of balls on the applet screen   
+ Thread.sleep(100);    
+ if( x < w - 100)     
  x += 5;  
  if( y < h - 100)  
  y += 5;  
